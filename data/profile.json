@@ -2,25 +2,16 @@
   "name": "Syed Riajul Islam",
   "username": "Iriajul",
   "title": "Backend Developer",
-  "subtitle": "Python • Django • FastAPI",
-
   "location": "Dhaka, Bangladesh",
+  "status": "Building scalable backend systems",
 
-  "email": "syedriajul9624@gmail.com",
-
-  "website": "",
-
-  "linkedin": "",
-
-  "github": "https://github.com/Iriajul",
-
-  "skills": [
+  "stack": [
     "Python",
     "Django",
     "FastAPI",
     "Docker",
-    "Redis",
     "PostgreSQL",
+    "Redis",
     "AWS",
     "Terraform",
     "Kubernetes"
@@ -31,5 +22,8 @@
     "Auction Platform",
     "NL2SQL",
     "Boyia Wallet"
-  ]
+  ],
+
+  "email": "syedriajul9624@gmail.com",
+  "github": "https://github.com/Iriajul"
 }
