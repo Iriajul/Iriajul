@@ -1,9 +1,18 @@
+import json
 from pathlib import Path
 
-WIDTH = 1000
-HEIGHT = 220
+with open("data/profile.json") as f:
+    profile = json.load(f)
 
-svg = f"""<?xml version="1.0" encoding="UTF-8"?>
+WIDTH = 1000
+HEIGHT = 260
+
+name = profile["name"]
+title = profile["title"]
+status = profile["status"]
+stack = " • ".join(profile["stack"][:6])
+
+svg = f'''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
      width="{WIDTH}"
      height="{HEIGHT}"
@@ -15,23 +24,35 @@ svg = f"""<?xml version="1.0" encoding="UTF-8"?>
     fill:#0d1117;
 }}
 
+.window {{
+    fill:#161b22;
+    stroke:#30363d;
+    stroke-width:2;
+}}
+
 .title {{
-    font-family: Consolas, Monaco, monospace;
-    font-size:38px;
     fill:#58a6ff;
+    font-family: Consolas, Monaco, monospace;
+    font-size:42px;
     font-weight:bold;
 }}
 
 .subtitle {{
+    fill:#c9d1d9;
     font-family: Consolas, Monaco, monospace;
     font-size:22px;
-    fill:#c9d1d9;
 }}
 
 .prompt {{
+    fill:#3fb950;
     font-family: Consolas, Monaco, monospace;
     font-size:20px;
-    fill:#3fb950;
+}}
+
+.small {{
+    fill:#8b949e;
+    font-family: Consolas, Monaco, monospace;
+    font-size:18px;
 }}
 
 .cursor {{
@@ -50,24 +71,16 @@ svg = f"""<?xml version="1.0" encoding="UTF-8"?>
     animation: fadeIn .8s forwards;
 }}
 
-.delay1 {{
-    animation-delay:.2s;
-}}
-
-.delay2 {{
-    animation-delay:.8s;
-}}
-
-.delay3 {{
-    animation-delay:1.4s;
-}}
+.delay1 {{ animation-delay:.2s; }}
+.delay2 {{ animation-delay:.8s; }}
+.delay3 {{ animation-delay:1.4s; }}
+.delay4 {{ animation-delay:2.0s; }}
 
 @keyframes fadeIn {{
     from {{
         opacity:0;
         transform:translateY(10px);
     }}
-
     to {{
         opacity:1;
         transform:translateY(0px);
@@ -76,57 +89,29 @@ svg = f"""<?xml version="1.0" encoding="UTF-8"?>
 
 </style>
 
-<rect class="background"
-      x="0"
-      y="0"
-      width="1000"
-      height="220"
-      rx="18"/>
+<rect width="{WIDTH}" height="{HEIGHT}" rx="18" class="background"/>
 
-<text class="prompt"
-      x="40"
-      y="50">
+<rect x="15" y="15" width="{WIDTH - 30}" height="{HEIGHT - 30}" rx="12" class="window"/>
 
-$ whoami
+<circle cx="45" cy="45" r="7" fill="#ff5f56"/>
+<circle cx="67" cy="45" r="7" fill="#ffbd2e"/>
+<circle cx="89" cy="45" r="7" fill="#27c93f"/>
 
-</text>
+<text x="35" y="100" class="prompt">$ whoami</text>
+<rect class="cursor" x="140" y="84" width="12" height="20"/>
 
-<rect class="cursor"
-      x="148"
-      y="34"
-      width="12"
-      height="20"/>
+<text x="35" y="150" class="title fade delay1">{name}</text>
 
-<text class="title fade delay1"
-      x="40"
-      y="105">
+<text x="35" y="185" class="subtitle fade delay2">{title}</text>
 
-Syed Riajul Islam
+<text x="35" y="212" class="small fade delay3">{status}</text>
 
-</text>
-
-<text class="subtitle fade delay2"
-      x="40"
-      y="145">
-
-Backend Developer
-
-</text>
-
-<text class="subtitle fade delay3"
-      x="40"
-      y="180">
-
-Python • Django • FastAPI • Docker • AWS
-
-</text>
+<text x="35" y="238" class="small fade delay4">{stack}</text>
 
 </svg>
-"""
+'''
 
 Path("assets").mkdir(exist_ok=True)
+Path("assets/header.svg").write_text(svg)
 
-with open("assets/header.svg", "w") as f:
-    f.write(svg)
-
-print("Generated assets/header.svg")
+print("Header generated.")
