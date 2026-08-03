@@ -28,3 +28,8 @@ venv/
 build/
 dist/
 *.egg-info/
+# Local source photos
+photos/
+
+# Generated preview images
+*.png
