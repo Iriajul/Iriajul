@@ -9,12 +9,14 @@
     "Python",
     "Django",
     "FastAPI",
-    "Docker",
+    "Socket.IO",
     "PostgreSQL",
     "Redis",
+    "Docker",
+    "Kubernetes",
     "AWS",
-    "Terraform",
-    "Kubernetes"
+    "CloudWatch",
+    "Terraform"
   ],
 
   "projects": [

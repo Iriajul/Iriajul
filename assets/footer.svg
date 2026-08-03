@@ -28,6 +28,18 @@
     font-size:16px;
 }
 
+.key {
+    fill:#3fb950;
+    font-family:Consolas,Monaco,monospace;
+    font-size:16px;
+}
+
+.sep {
+    fill:#8b949e;
+    font-family:Consolas,Monaco,monospace;
+    font-size:16px;
+}
+
 .cursor {
     fill:#3fb950;
     animation:blink 1s infinite;
@@ -45,7 +57,9 @@
 
 <text x="35" y="55" class="prompt">$ contact --info</text>
 
-<text x="35" y="85" class="text">✉  syedriajul9624@gmail.com    ⌂  https://github.com/Iriajul    ⚲  Dhaka, Bangladesh</text>
+<text x="35" y="85">
+  <tspan class="key">email</tspan><tspan class="text">  syedriajul9624@gmail.com</tspan><tspan class="sep">   ·   </tspan><tspan class="key">github</tspan><tspan class="text">  https://github.com/Iriajul</tspan><tspan class="sep">   ·   </tspan><tspan class="key">loc</tspan><tspan class="text">  Dhaka, Bangladesh</tspan>
+</text>
 <rect class="cursor" x="35" y="98" width="10" height="16"/>
 
 </svg>

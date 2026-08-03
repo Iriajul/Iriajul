@@ -92,6 +92,6 @@
 
 <text x="35" y="212" class="small fade delay3">Building scalable backend systems</text>
 
-<text x="35" y="238" class="small fade delay4">Python • Django • FastAPI • Docker • PostgreSQL • Redis</text>
+<text x="35" y="238" class="small fade delay4">Python • Django • FastAPI • Socket.IO • PostgreSQL • Redis</text>
 
 </svg>

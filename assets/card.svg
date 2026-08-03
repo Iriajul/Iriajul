@@ -1,77 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="500"
-     height="340"
-     viewBox="0 0 500 340">
+     width="520"
+     height="497"
+     viewBox="0 0 520 497">
 
 <style>
 
-.bg {
-fill:#161b22;
+.bg { fill:#0d1117; }
+
+.window {
+    fill:#161b22;
+    stroke:#30363d;
+    stroke-width:2;
 }
 
-.title {
-fill:#58a6ff;
-font-family:Consolas,monospace;
-font-size:20px;
-font-weight:bold;
+.rule { stroke:#30363d; stroke-width:1; }
+
+.prompt {
+    fill:#3fb950;
+    font-family:Consolas,Monaco,monospace;
+    font-size:20px;
+    font-weight:bold;
 }
 
-.text {
-fill:#c9d1d9;
-font-family:Consolas,monospace;
-font-size:16px;
+.section {
+    fill:#58a6ff;
+    font-family:Consolas,Monaco,monospace;
+    font-size:15px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.key {
+    fill:#8b949e;
+    font-family:Consolas,Monaco,monospace;
+    font-size:16px;
+}
+
+.val {
+    fill:#c9d1d9;
+    font-family:Consolas,Monaco,monospace;
+    font-size:16px;
+}
+
+.status {
+    fill:#3fb950;
+    font-family:Consolas,Monaco,monospace;
+    font-size:16px;
+}
+
+.dot { fill:#3fb950; }
+
+.fade {
+    opacity:0;
+    animation:fadeIn .6s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity:0; transform:translateY(6px); }
+    to   { opacity:1; transform:translateY(0); }
 }
 
 </style>
 
-<rect
-x="0"
-y="0"
-width="500"
-height="340"
-rx="16"
-class="bg"/>
-
-<text
-x="20"
-y="35"
-class="title">
-
-$ profile
-
-</text>
-
-<text x="40" y="70" class="text">
-
-Name : Syed Riajul Islam
-
-</text>
-
-<text x="40" y="95" class="text">
-
-Role : Backend Developer
-
-</text>
-
-<text x="40" y="120" class="text">• Python</text>
-<text x="40" y="144" class="text">• Django</text>
-<text x="40" y="168" class="text">• FastAPI</text>
-<text x="40" y="192" class="text">• Docker</text>
-<text x="40" y="216" class="text">• PostgreSQL</text>
-<text x="40" y="240" class="text">• Redis</text>
-<text x="40" y="264" class="text">• AWS</text>
-<text x="40" y="288" class="text">• Terraform</text>
-<text x="40" y="312" class="text">• Kubernetes</text>
-
-
-<text
-x="40"
-y="315"
-class="text">
-
-Status : Building scalable backend systems
-
-</text>
+<rect x="0" y="0" width="520" height="497" rx="18" class="bg"/>
+<rect x="15" y="15" width="490" height="467" rx="12" class="window"/>
+<circle cx="45" cy="45" r="7" fill="#ff5f56"/>
+<circle cx="67" cy="45" r="7" fill="#ffbd2e"/>
+<circle cx="89" cy="45" r="7" fill="#27c93f"/>
+<g class="fade" style="animation-delay:0.0s"><text x="35" y="95" class="prompt">$ profile</text></g>
+<g class="fade" style="animation-delay:0.12s"><text x="35" y="135" class="key">Name</text><text x="110" y="135" class="val">Syed Riajul Islam</text></g>
+<g class="fade" style="animation-delay:0.24s"><text x="35" y="161" class="key">Role</text><text x="110" y="161" class="val">Backend Developer</text></g>
+<g class="fade" style="animation-delay:0.36s"><text x="35" y="187" class="key">Where</text><text x="110" y="187" class="val">Dhaka, Bangladesh</text></g>
+<line x1="35" y1="225" x2="485" y2="225" class="rule"/>
+<g class="fade" style="animation-delay:0.48s"><text x="35" y="253" class="section">tech stack</text></g>
+<g class="fade" style="animation-delay:0.6s"><rect x="35" y="272" width="10" height="10" rx="2" class="dot"/><text x="55" y="283" class="val">Python</text></g>
+<g class="fade" style="animation-delay:0.72s"><rect x="285" y="272" width="10" height="10" rx="2" class="dot"/><text x="305" y="283" class="val">Docker</text></g>
+<g class="fade" style="animation-delay:0.84s"><rect x="35" y="298" width="10" height="10" rx="2" class="dot"/><text x="55" y="309" class="val">Django</text></g>
+<g class="fade" style="animation-delay:0.96s"><rect x="285" y="298" width="10" height="10" rx="2" class="dot"/><text x="305" y="309" class="val">Kubernetes</text></g>
+<g class="fade" style="animation-delay:1.08s"><rect x="35" y="324" width="10" height="10" rx="2" class="dot"/><text x="55" y="335" class="val">FastAPI</text></g>
+<g class="fade" style="animation-delay:1.2s"><rect x="285" y="324" width="10" height="10" rx="2" class="dot"/><text x="305" y="335" class="val">AWS</text></g>
+<g class="fade" style="animation-delay:1.32s"><rect x="35" y="350" width="10" height="10" rx="2" class="dot"/><text x="55" y="361" class="val">Socket.IO</text></g>
+<g class="fade" style="animation-delay:1.44s"><rect x="285" y="350" width="10" height="10" rx="2" class="dot"/><text x="305" y="361" class="val">CloudWatch</text></g>
+<g class="fade" style="animation-delay:1.56s"><rect x="35" y="376" width="10" height="10" rx="2" class="dot"/><text x="55" y="387" class="val">PostgreSQL</text></g>
+<g class="fade" style="animation-delay:1.68s"><rect x="285" y="376" width="10" height="10" rx="2" class="dot"/><text x="305" y="387" class="val">Terraform</text></g>
+<g class="fade" style="animation-delay:1.8s"><rect x="35" y="402" width="10" height="10" rx="2" class="dot"/><text x="55" y="413" class="val">Redis</text></g>
+<line x1="35" y1="445" x2="485" y2="445" class="rule"/>
+<g class="fade" style="animation-delay:1.92s"><text x="35" y="473" class="key">status</text><text x="110" y="473" class="status">Building scalable backend systems</text></g>
 
 </svg>

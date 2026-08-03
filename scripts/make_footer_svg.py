@@ -47,6 +47,18 @@ svg = f'''<?xml version="1.0" encoding="UTF-8"?>
     font-size:16px;
 }}
 
+.key {{
+    fill:#3fb950;
+    font-family:Consolas,Monaco,monospace;
+    font-size:16px;
+}}
+
+.sep {{
+    fill:#8b949e;
+    font-family:Consolas,Monaco,monospace;
+    font-size:16px;
+}}
+
 .cursor {{
     fill:#3fb950;
     animation:blink 1s infinite;
@@ -64,7 +76,9 @@ svg = f'''<?xml version="1.0" encoding="UTF-8"?>
 
 <text x="35" y="55" class="prompt">$ contact --info</text>
 
-<text x="35" y="85" class="text">✉  {email}    ⌂  {github}    ⚲  {location}</text>
+<text x="35" y="85">
+  <tspan class="key">email</tspan><tspan class="text">  {email}</tspan><tspan class="sep">   ·   </tspan><tspan class="key">github</tspan><tspan class="text">  {github}</tspan><tspan class="sep">   ·   </tspan><tspan class="key">loc</tspan><tspan class="text">  {location}</tspan>
+</text>
 <rect class="cursor" x="35" y="98" width="10" height="16"/>
 
 </svg>
