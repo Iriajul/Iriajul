@@ -1,6 +1,6 @@
 {
   "username": "Iriajul",
-  "total": 261,
+  "total": 274,
   "days": [
     {
       "date": "2025-08-31",
@@ -1834,8 +1834,13 @@
     },
     {
       "date": "2026-09-01",
+      "level": 3,
+      "count": 17
+    },
+    {
+      "date": "2026-09-02",
       "level": 2,
-      "count": 13
+      "count": 9
     }
   ]
 }
